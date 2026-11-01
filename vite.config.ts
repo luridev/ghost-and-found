@@ -3,8 +3,8 @@ import { getBrowserTargets } from '@protoapps/browser-targets';
 import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite';
 
-export default defineConfig({
-  base: '/ghost-and-found/',
+export default defineConfig(({ command, isPreview }) => ({
+  base: command === 'serve' && isPreview !== true ? '/' : '/ghost-and-found/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -14,4 +14,4 @@ export default defineConfig({
   build: {
     target: getBrowserTargets(),
   },
-});
+}));

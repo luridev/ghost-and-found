@@ -1,11 +1,21 @@
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
+* {
+  box-sizing: border-box;
 }
 
-.App {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  background: #141720;
+  color: #e5e5ec;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  color-scheme: dark;
+}
+
+body {
+  min-width: 1048px;
+  margin: 0;
+}
+
+button {
+  font: inherit;
 }

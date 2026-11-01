@@ -26,6 +26,7 @@
     "lint:fix": "npm run lint:eslint -- --fix && npm run lint:stylelint -- --fix",
     "lint:stylelint": "stylelint \"**/*.{css,vue}\" --cache --cache-strategy metadata",
     "preview": "vite preview",
+    "release": "npm run validate && npm run build && bumpp",
     "typecheck": "vue-tsc -b",
     "validate": "npm run check:commit"
   },
@@ -41,6 +42,7 @@
     "@types/node": "^24.19.2",
     "@vitejs/plugin-vue": "^6.0.10",
     "@vue/tsconfig": "^0.9.1",
+    "bumpp": "^12.3.0",
     "eslint": "^10.14.0",
     "globals": "^17.14.0",
     "lefthook": "^2.2.2",
