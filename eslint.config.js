@@ -1,10 +1,10 @@
-import { createProtoConfig } from '@protoapps/eslint-config-vue';
+import { createProtoConfig } from '@protoapps/eslint-config';
 import { globalIgnores } from 'eslint/config';
 import globals from 'globals';
 import { version } from 'vue';
 
 export default createProtoConfig(
-  { tsconfigRootDir: import.meta.dirname, vueVersion: version },
+  { tsconfigRootDir: import.meta.dirname, vue: { version } },
   globalIgnores(['node_modules/**', 'dist/**', '*.log']),
   {
     name: 'ghost-and-found/browser',
